@@ -1,0 +1,25 @@
+import React, { Component } from 'react';
+import '../App.css';
+
+class Question extends Component {
+  constructor(props){
+    super(props)
+     this.state={
+      start: false
+    } 
+  }
+  
+  render() {
+    var {start}= this.state
+    return (
+      <div className="App">
+        <p>Q: {this.props.data}</p>
+        <p>1: {this.props.ans1}</p>
+        <p>2: {this.props.ans2}</p>
+        <p>3: {this.props.ans3}</p> 
+      </div>
+    );
+  }
+}
+
+export default Question;
